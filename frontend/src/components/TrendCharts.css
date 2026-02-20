@@ -1,0 +1,150 @@
+/* TrendCharts */
+.trend-charts--empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+}
+.trend-charts__placeholder {
+  color: var(--color-text-muted);
+  font-style: italic;
+  font-size: var(--font-size-sm);
+}
+
+.trend-charts__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--panel-gap);
+}
+
+.trend-chart__body {
+  padding: var(--spacing-sm) var(--spacing-sm) var(--spacing-xs);
+}
+
+.trend-chart__unit {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xxs);
+  color: var(--color-text-muted);
+}
+
+/* ── Toggle Group (CFR-chart style pill buttons) ──────────────────────── */
+.trend-toggle-group {
+  display: flex;
+  gap: 2px;
+  background: var(--color-bg-primary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  padding: 2px;
+}
+
+.trend-toggle {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  color: var(--color-text-muted);
+  font-family: var(--font-display);
+  font-size: var(--font-size-xxs);
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+.trend-toggle:hover {
+  background: var(--color-bg-hover);
+  color: var(--color-text-secondary);
+}
+.trend-toggle--active {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--color-text-primary);
+  box-shadow: 0 0 8px var(--toggle-glow, transparent);
+}
+
+.trend-toggle__indicator {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+.trend-toggle--active .trend-toggle__indicator {
+  box-shadow: 0 0 6px var(--toggle-color, #fff);
+}
+
+.trend-toggle__label {
+  white-space: nowrap;
+}
+
+/* ── Custom Tooltip (glassmorphism, matching CFR chart) ───────────────── */
+.trend-tooltip {
+  background: linear-gradient(135deg, rgba(20, 20, 20, 0.98) 0%, rgba(10, 10, 10, 0.98) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: 11px;
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.5),
+    0 2px 8px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  min-width: 140px;
+  position: relative;
+}
+.trend-tooltip::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.3), transparent);
+}
+
+.trend-tooltip__header {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-xs);
+  padding-bottom: var(--spacing-xs);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.trend-tooltip__row {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: 1px 0;
+}
+
+.trend-tooltip__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.trend-tooltip__label {
+  color: var(--color-text-muted);
+  font-weight: 500;
+  flex: 1;
+}
+
+.trend-tooltip__value {
+  color: var(--color-text-primary);
+  font-family: var(--font-mono);
+  font-weight: 600;
+}
+
+/* ── Responsive ───────────────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .trend-charts__grid {
+    grid-template-columns: 1fr;
+  }
+}

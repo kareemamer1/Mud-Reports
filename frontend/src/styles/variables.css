@@ -1,0 +1,95 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   Solids Control Insight System — Design Tokens
+   Dark industrial control-room aesthetic
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* ── Backgrounds ─────────────────────────────────────────────────────── */
+  --color-bg-primary:    #0a0a0a;
+  --color-bg-secondary:  #111111;
+  --color-bg-panel:      #1a1a1a;
+  --color-bg-surface:    #141414;
+  --color-bg-elevated:   #1e1e1e;
+  --color-bg-hover:      rgba(255, 255, 255, 0.04);
+  --color-bg-active:     rgba(255, 255, 255, 0.06);
+
+  /* ── Accent & Brand ──────────────────────────────────────────────────── */
+  --color-accent:        #00d4ff;
+  --color-accent-dim:    rgba(0, 212, 255, 0.15);
+  --color-accent-glow:   rgba(0, 212, 255, 0.4);
+  --color-hover:         #00ff88;
+
+  /* ── Severity ────────────────────────────────────────────────────────── */
+  --color-severity-high:    #ef4444;
+  --color-severity-medium:  #f59e0b;
+  --color-severity-low:     #10b981;
+
+  /* ── Chart Series ────────────────────────────────────────────────────── */
+  --color-series-blue:      #3b82f6;
+  --color-series-green:     #10b981;
+  --color-series-amber:     #f59e0b;
+  --color-series-purple:    #8b5cf6;
+  --color-series-cyan:      #00d4ff;
+  --color-series-rose:      #f43f5e;
+
+  /* ── Text ────────────────────────────────────────────────────────────── */
+  --color-text-primary:    rgba(255, 255, 255, 0.92);
+  --color-text-secondary:  rgba(255, 255, 255, 0.64);
+  --color-text-muted:      rgba(255, 255, 255, 0.38);
+  --color-text-accent:     var(--color-accent);
+
+  /* ── Borders & Dividers ──────────────────────────────────────────────── */
+  --color-border:          rgba(255, 255, 255, 0.06);
+  --color-border-subtle:   rgba(255, 255, 255, 0.03);
+  --color-border-accent:   rgba(0, 212, 255, 0.25);
+
+  /* ── Typography ──────────────────────────────────────────────────────── */
+  --font-display:    'JetBrains Mono', 'Fira Code', monospace;
+  --font-body:       'DM Sans', 'Segoe UI', system-ui, sans-serif;
+  --font-mono:       'JetBrains Mono', 'SF Mono', 'Consolas', monospace;
+
+  --font-size-xxs:   0.625rem;  /* 10px */
+  --font-size-xs:    0.6875rem; /* 11px */
+  --font-size-sm:    0.75rem;   /* 12px */
+  --font-size-base:  0.875rem;  /* 14px */
+  --font-size-md:    1rem;      /* 16px */
+  --font-size-lg:    1.125rem;  /* 18px */
+  --font-size-xl:    1.5rem;    /* 24px */
+  --font-size-2xl:   2rem;      /* 32px */
+
+  /* ── Spacing ─────────────────────────────────────────────────────────── */
+  --spacing-xxs:   2px;
+  --spacing-xs:    4px;
+  --spacing-sm:    8px;
+  --spacing-md:    12px;
+  --spacing-lg:    16px;
+  --spacing-xl:    24px;
+  --spacing-2xl:   32px;
+  --spacing-3xl:   48px;
+
+  /* ── Radius ──────────────────────────────────────────────────────────── */
+  --radius-xs:     2px;
+  --radius-sm:     4px;
+  --radius-md:     8px;
+  --radius-lg:     12px;
+  --radius-xl:     16px;
+  --radius-pill:   999px;
+
+  /* ── Shadows ─────────────────────────────────────────────────────────── */
+  --shadow-sm:     0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md:     0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-lg:     0 8px 32px rgba(0, 0, 0, 0.5);
+  --shadow-glow:   0 0 20px var(--color-accent-glow);
+  --shadow-inset:  inset 0 1px 0 rgba(255, 255, 255, 0.05);
+
+  /* ── Transitions ─────────────────────────────────────────────────────── */
+  --transition-fast:     0.15s ease;
+  --transition-base:     0.2s ease;
+  --transition-slow:     0.35s ease;
+  --transition-spring:   0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* ── Layout ──────────────────────────────────────────────────────────── */
+  --header-height:    56px;
+  --max-content:      1440px;
+  --panel-gap:        var(--spacing-lg);
+}

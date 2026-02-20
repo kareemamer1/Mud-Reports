@@ -1,0 +1,86 @@
+/* EquipmentStatus */
+.equip__placeholder {
+  color: var(--color-text-muted);
+  font-style: italic;
+  font-size: var(--font-size-sm);
+  text-align: center;
+  padding: var(--spacing-xl);
+}
+
+.equip__scale-label {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xxs);
+  color: var(--color-text-muted);
+  letter-spacing: 0.5px;
+}
+
+.equip__row {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-xs) 0;
+}
+
+.equip__label-col {
+  width: 90px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.equip__name {
+  font-family: var(--font-display);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  letter-spacing: 0.3px;
+}
+
+.equip__sub {
+  font-size: var(--font-size-xxs);
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.equip__bar-col {
+  flex: 1;
+  min-width: 0;
+}
+
+.equip__bar-track {
+  height: 6px;
+  background: var(--color-bg-elevated);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+}
+
+.equip__bar-fill {
+  height: 100%;
+  border-radius: var(--radius-pill);
+  transition: width 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+}
+
+.equip__bar-fill--good {
+  box-shadow: 0 0 6px rgba(16, 185, 129, 0.4);
+}
+.equip__bar-fill--warn {
+  box-shadow: 0 0 6px rgba(245, 158, 11, 0.4);
+}
+.equip__bar-fill--down {
+  box-shadow: 0 0 6px rgba(239, 68, 68, 0.4);
+}
+
+.equip__hours {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  width: 44px;
+  text-align: right;
+  flex-shrink: 0;
+}
+.equip__hours--good { color: var(--color-severity-low); }
+.equip__hours--warn { color: var(--color-severity-medium); }
+.equip__hours--down { color: var(--color-severity-high); }
